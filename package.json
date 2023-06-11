@@ -2,8 +2,9 @@
   "name": "chapter7",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
+    "dev": "nodemon app.js",
     "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "sequelize:create_migration": "sequelize-cli migration:generate --name",
@@ -15,6 +16,8 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.1.4",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.22",
     "pg": "^8.11.0",
     "sequelize": "^6.32.0"
   },

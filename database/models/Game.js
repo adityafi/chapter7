@@ -1,23 +1,30 @@
 const { Model, DataTypes } = require("sequelize");
 
-class Game extends Model {}
+function GameModel(sequelize) {
+  class Game extends Model {}
 
-Game.init(
-  {
-    id: {
-      type: DataTypes.INTEGER,
-      primaryKey: true,
-      autoIncrement: true,
+  Game.init(
+    {
+      id: {
+        type: DataTypes.INTEGER,
+        primaryKey: true,
+        autoIncrement: true,
+      },
+      name: {
+        type: DataTypes.STRING,
+      },
+      description: {
+        type: DataTypes.STRING,
+      },
     },
-    name: {
-      type: DataTypes.STRING,
-    },
-    description: {
-      type: DataTypes.STRING,
-    },
-  },
-  {
-    tableName: "games",
-    timestamps: false,
-  }
-);
+    {
+      sequelize,
+      tableName: "games",
+      timestamps: false,
+    }
+  );
+
+  return Game;
+}
+
+module.exports = GameModel;
