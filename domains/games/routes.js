@@ -120,7 +120,7 @@ gameRouter.delete("/api/v1/games/:id", async function (req, res) {
   }
 
   res.json({
-    message: "success deleting gamea",
+    message: "delete games succed",
     result: deleted,
     error: null,
   });

@@ -25,6 +25,9 @@ function UserBioModel(sequelize) {
       last_name: {
         type: DataTypes.STRING,
       },
+      hobby: {
+        type: DataTypes.STRING,
+      },
     },
     {
       sequelize,

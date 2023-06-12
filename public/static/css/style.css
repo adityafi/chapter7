@@ -1,0 +1,9 @@
+/* body {
+  background-color: royalblue;
+} */
+
+table,
+th,
+td {
+  border: 1px solid black;
+}

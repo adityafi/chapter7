@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delete User</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+  </head>
+  <body>
+    <h1>Delete User</h1>
+
+    <a href="/dashboard/home">Back</a>
+
+    <br />
+    <br />
+
+    <form action="/form/users/delete" method="post">
+      <table>
+        <tr>
+          <td>ID</td>
+          <td><%= user.id %></td>
+        </tr>
+        <tr>
+          <td>Username</td>
+          <td><%= user.username %></td>
+        </tr>
+        <tr>
+          <td>Role</td>
+          <td><%= user.role %></td>
+        </tr>
+      </table>
+
+      <input type="hidden" name="user_id" value="<%= user.id %>" />
+
+      <br />
+      <button type="submit">Delete</button>
+    </form>
+  </body>
+</html>
